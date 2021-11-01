@@ -1,0 +1,3 @@
+# Curious Humans: Please don't crawl my site for any reason. I value my privacy. Thanks!
+User-Agent: *
+Disallow: *

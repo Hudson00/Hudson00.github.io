@@ -1,8 +1,12 @@
 """Cam Hudson Personal Website app's package initializer."""
-import flask
+from flask import Flask
+from flask_reggie import Reggie
 
-# app is a single object used by all the code modules in this package
-app = flask.Flask(__name__)  # pylint: disable=invalid-name
+# app is a single object used by all the code modules in this package. The
+# static parameters are used to map requests for root files to the static dir,
+# e.g. for "GET /me.png" , server responds with "/static/me.png"
+app = Flask(__name__)  # pylint: disable=invalid-name
+Reggie(app)
 
 # Read settings from config module (insta485/config.py)
 app.config.from_object(f'{__name__}.config')
@@ -20,6 +24,6 @@ app.config.from_envvar('CAMHUDSON_SETTINGS', silent=True)
 # (Reference http://flask.pocoo.org/docs/patterns/packages/)  We're
 # going to tell pylint and pycodestyle to ignore this coding style violation.
 # import camhudson.api      # noqa: E402  pylint: disable=wrong-import-position
-import camhudson.views     # noqa: E402  pylint: disable=wrong-import-position
-# import camhudson.model    # noqa: E402  pylint: disable=wrong-import-position
 # import camhudson.helpers  # noqa: E402  pylint: disable=wrong-import-position
+# import camhudson.model    # noqa: E402  pylint: disable=wrong-import-position
+import camhudson.views     # noqa: E402  pylint: disable=wrong-import-position

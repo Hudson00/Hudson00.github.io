@@ -7,6 +7,7 @@ from flask.templating import render_template
 import camhudson
 
 @camhudson.app.route('/', methods=['GET'])
-def get_index():
+@camhudson.app.route('/index.html', methods=['GET'])
+def get_index() -> str:
     """Handle request for homepage."""
     return render_template('index.html')
