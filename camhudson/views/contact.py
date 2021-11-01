@@ -9,4 +9,4 @@ import camhudson
 @camhudson.app.route('/contact-info', methods=['GET'])
 def get_contact_info() -> str:
     """Handle request for homepage."""
-    return render_template('index.html')
+    return render_template('contact-info.html')
