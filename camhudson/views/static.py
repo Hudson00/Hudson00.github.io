@@ -8,10 +8,7 @@ import camhudson
 
 @camhudson.app.route('/static/<path>', methods=['GET'])
 def get_static_file(path: str) -> str:
-    """Handle request for my picture."""
-    print('\there')
-    print(path)
-    print('\tdone')
+    """Handle request for any static file."""
     return send_from_directory(
         camhudson.app.config['STATIC_FOLDER'],
         f'{path}'

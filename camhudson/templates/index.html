@@ -1,63 +1,26 @@
 {% extends "base.html" %}
 {% block page %}
-<main>
-    <div class="container">
-        <div class="card-group gap-4">
-            <a href="/bio">
-                <div class="card bg-secondary border-light border-3" style="width: 18rem;">
-                    <img src="/static/images/cam.png" class="card-img-top" alt="Cam Hudson selfie">
+<div class="container">
+    <div class="card-group gap-4 justify-content-center">
+        {% for card in cards %}
+            <a href="{{ card.a_href | safe }}">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ card.img_href }}" class="card-img-top" alt="{{ card.img_alt }}">
                     <div class="card-body">
                         <h5 class="card-title">
                             <b>
-                                Cam's Bio
+                                {{ card.name | safe }}
                             </b>
                         </h5>
                         <p class="card-text">
                             <i>
-                                Take a few moments to learn a little about Cam!
-                            </i>
-                        </p>
-                        <!-- <a href="/bio" class="btn btn-primary">&gt;&gt;</a> -->
-                    </div>
-                </div>
-            </a>
-
-            <a href="/hudson-resume.pdf">
-                <div class="card bg-secondary border-light border-3" style="width: 18rem;">
-                    <img src="/static/images/joao-ferrao-resume.png" class="card-img-top" alt="Resume on desk">
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            <b>
-                                Cam's R&eacute;sum&eacute;
-                            </b>
-                        </h5>
-                        <p class="card-text">
-                            <i>
-                                Dive into Cam's skills, education, and work history!
+                                {{ card.text }}
                             </i>
                         </p>
                     </div>
                 </div>
             </a>
-
-            <a href="/contact-info">
-                <div class="card bg-secondary border-light border-3" style="width: 18rem;">
-                    <img src="/static/images/elizaveta-kushnirenko-mailbox.png" class="card-img-top" alt="Mailbox">
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            <b>
-                                Contact Cam
-                            </b>
-                        </h5>
-                        <p class="card-text">
-                            <i>
-                                Find out how you can get in touch with Cam!
-                            </i>
-                        </p>
-                    </div>
-                </div>
-            </a>
-        </div>
+        {% endfor %}
     </div>
-</main>
+</div>
 {% endblock page %}

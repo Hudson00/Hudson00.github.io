@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block page %}
+<div class="container">
+    <h1>404: Requested page not found</h1>
+    <h3>
+        Uh-oh! The page you're looking for couldn't be found:
+    </h3>
+    {{ url }}
+</div>
+{% endblock page %}

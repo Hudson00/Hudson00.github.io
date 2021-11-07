@@ -1,0 +1,7 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Hudson;Cam;;;
+FN:Cam Hudson
+TEL;type=IPHONE;type=CELL;type=VOICE;type=pref:+1 (248) 425-5199
+EMAIL;type=INTERNET;type=HOME;type=pref:cahu@umich.edu
+END:VCARD

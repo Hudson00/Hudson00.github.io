@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Stop on errors
+set -Eeuo pipefail
+
+# Sanity check command line options
+usage() {
+    echo "Usage: $0"
+    echo "Export environment variables for access to DynamoDB."
+}
+
+if [ $# -ne 0 ]; then
+    usage
+    exit 1
+fi
+
+# For establishing connection to the DynamoDB table
+export AWS_ACCESS_KEY_ID='AKIAWZY46OMB6DAQ56UC'
+export AWS_SECRET_ACCESS_KEY='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'

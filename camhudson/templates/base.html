@@ -2,11 +2,8 @@
 <html lang="en">
 
 <head>
-    <title>Cam Hudson's Personal Website</title>
-    <!-- <link rel="stylesheet" type="text/css" href="/static/css/style.css"> -->
+    <title>Cam Hudson&#39;s Personal Website</title>
     
-    <!-- TODO: Add Bootstrap stuff -->
-
     <!-- Required meta tags for Bootstrap 5.0 -->
     <meta charset="utf-8">
         <!--
@@ -20,6 +17,7 @@
     
     <!-- Get pre-compiled Boostrap 5.0 with Popper from jsDelivr CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Link stylesheet for my Bootstrap overrides -->
     <link href="/static/css/style.css" rel="stylesheet">
 </head>
 
@@ -34,29 +32,61 @@
                         </span>
                     </a>
                     <ul class="nav nav-pills gap-1">
-                        <li class="nav-item rounded-3">
-                            <a class="nav-link active" href="/">
+                        <li id="nav-item-home" class="nav-item">
+                            <a
+                                {% if request.path == "/" %}
+                                    class="nav-link active disabled"
+                                    href="#"
+                                {% else %}
+                                    class="nav-link"
+                                    href="/"
+                                {% endif %}
+                            >
                                 Home
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/bio">
+                        <li id="nav-item-bio" class="nav-item">
+                            <a
+                                {% if request.path == "/bio" %}
+                                    class="nav-link active disabled"
+                                    href="#"
+                                {% else %}
+                                    class="nav-link"
+                                    href="/bio"
+                                {% endif %}
+                            >
                                 Bio
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/hudson-resume.pdf">
+                        <li id="nav-item-resume" class="nav-item">
+                            <a class="nav-link" href="/hudson-resume.pdf" target="_blank">
                                 R&eacute;sum&eacute;
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/contact-info">
+                        <li id="nav-item-contact" class="nav-item">
+                            <a
+                                {% if request.path == "/contact-info" %}
+                                    class="nav-link active disabled"
+                                    href="#"
+                                {% else %}
+                                    class="nav-link"
+                                    href="/contact-info"
+                                {% endif %}
+                            >
                                 Contact 
-                                <!-- TODO: put bug report section in this link -->
+                                <!-- TODO: put bug report link on this page, too -->
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/bug">
+                        <li id="nav-item-bug" class="nav-item">
+                            <a
+                                {% if request.path == "/bug" %}
+                                    class="nav-link active disabled"
+                                    href="#"
+                                {% else %}
+                                    class="nav-link"
+                                    href="/bug"
+                                {% endif %}
+                            >
                                 Bug Report
                             </a>
                         </li>
@@ -69,17 +99,19 @@
             </div>
         </div>
     </header>
-        
+    
+    <main>
         {% block page %}
         {% endblock page %}
-        
-        <!--
-            NOTE: This is Bootstrap 5's bundle inclusion. It includes everything.
-            If you want to include separate scripts to (maybe) make things
-            run a bit faster, see
-            https://getbootstrap.com/docs/5.0/getting-started/introduction/ .
-        -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    </body>
+    </main>
+    
+    <!--
+        NOTE: This is Bootstrap 5's bundle inclusion. It includes everything.
+        If you want to include separate scripts to (maybe) make things
+        run a bit faster, see
+        https://getbootstrap.com/docs/5.0/getting-started/introduction/ .
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
     
 </html>

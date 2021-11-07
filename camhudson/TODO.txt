@@ -1,0 +1,17 @@
+TODOs:
+
+FEATURE             |  TODO DESCRIPTION
+--------------------------------------------------------------------------------
+Anonymous Message   |  - Add database functionality to store messages.
+                    |  - Log only timestamp and message content
+                    |  - Use PostgreSQL
+                    |  - Might be good to use JS for something here
+--------------------------------------------------------------------------------
+Bug Reports         |  - Add form. Good place to use JS for a successful send.
+--------------------------------------------------------------------------------
+Last Updated        |  - Add a "last updated" footer
+--------------------------------------------------------------------------------
+Resume Page         |  - Consider adding a page that consists of links to
+                    |   different resume versions
+--------------------------------------------------------------------------------
+Consider            |  - Add code to page

@@ -11,11 +11,13 @@ setup(
     packages=['camhudson'],
     include_package_data=True,
     install_requires=[
+        # 'arrow',
+        'boto3',
+        'botocore',
         'Flask',
-        'html5validator',
-        'nodeenv',
-        'psycopg2-binary',  # PostgreSQL adapter. TODO: Remove if not using SQL
-        'requests',
+        # 'html5validator',
+        # 'nodeenv',
+        # 'requests',
     ],
     python_requires='>=3.6'
 )
