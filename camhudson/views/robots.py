@@ -11,5 +11,5 @@ def get_robots() -> str:
     """Handle request for robots.txt."""
     return send_from_directory(
         camhudson.app.config['STATIC_FOLDER'],
-        '/robots.txt'
+        'files/robots.txt'
     )
