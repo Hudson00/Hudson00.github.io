@@ -1,15 +1,16 @@
 """Cam Hudson's Personal Website model (database) API.
 
 Database is hosted by AWS DynamoDB. Tables include:
-- database-dev
+- database-dev TODO: update if adding a prod database
 """
 from botocore.config import Config
+from boto3_type_annotations.dynamodb import Client
 from os import environ
 import boto3
 import flask
 import camhudson
 
-def get_db():
+def get_db() -> Client:
     if 'dynamodb' not in flask.g:
         db_client_config = Config(
             region_name='us-east-1',

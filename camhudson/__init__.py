@@ -25,5 +25,5 @@ app.config.from_envvar('CAMHUDSON_SETTINGS', silent=True)
 # going to tell pylint and pycodestyle to ignore this coding style violation.
 # import camhudson.api      # noqa: E402  pylint: disable=wrong-import-position
 # import camhudson.helpers  # noqa: E402  pylint: disable=wrong-import-position
-# import camhudson.model    # noqa: E402  pylint: disable=wrong-import-position
+import camhudson.model    # noqa: E402  pylint: disable=wrong-import-position
 import camhudson.views     # noqa: E402  pylint: disable=wrong-import-position

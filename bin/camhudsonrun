@@ -7,7 +7,8 @@
 # Stop on errors, print commands
 # See https://vaneyckt.io/posts/safer_bash_scripts_with_set_euxo_pipefail/
 set -Eeuo pipefail
-set -x
+# Echo commands before executing them
+# set -x  # Commented out because don't want to print AWS keys
 
 # Build (TODO: delete this if not using db)
 # bin/camhudsondb destroy
@@ -19,3 +20,4 @@ source env/bin/activate
 export FLASK_ENV=development
 export FLASK_APP=camhudson
 flask run --host 0.0.0.0 --port 8000
+

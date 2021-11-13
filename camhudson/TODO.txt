@@ -6,6 +6,10 @@ Anonymous Message   |  - Add database functionality to store messages.
                     |  - Log only timestamp and message content
                     |  - Use PostgreSQL
                     |  - Might be good to use JS for something here
+                    |  - Maybe return some sort of hash to check status message
+                    |    (read/unread) and/or see a direct reply and/or option
+                    |    to follow up?
+                    |  - Attachment capabilities (png/jpg/jpeg/gif/mp3/mp4, etc)
 --------------------------------------------------------------------------------
 Bug Reports         |  - Add form. Good place to use JS for a successful send.
 --------------------------------------------------------------------------------
@@ -14,4 +18,9 @@ Last Updated        |  - Add a "last updated" footer
 Resume Page         |  - Consider adding a page that consists of links to
                     |   different resume versions
 --------------------------------------------------------------------------------
-Consider            |  - Add code to page
+Code                |  - Add code to page
+--------------------------------------------------------------------------------
+Captcha             |  - Add a Captcha to really prevent crawling. Don't load
+                    |    any content until the Captcha is complete. Issue a
+                    |    cookie for completing it with a TTL of <UNKNOWN>.
+--------------------------------------------------------------------------------
