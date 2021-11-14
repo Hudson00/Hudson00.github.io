@@ -4,13 +4,13 @@ Database is hosted by AWS DynamoDB. Tables include:
 - database-dev TODO: update if adding a prod database
 """
 from botocore.config import Config
-from boto3_type_annotations.dynamodb import Client
 from os import environ
 import boto3
+import boto3_type_annotations.dynamodb
 import flask
 import camhudson
 
-def get_db() -> Client:
+def get_db() -> boto3_type_annotations.dynamodb.Client:
     if 'dynamodb' not in flask.g:
         db_client_config = Config(
             region_name='us-east-1',
