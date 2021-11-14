@@ -4,6 +4,14 @@ a, u {
     color: #f8f9fa;
 }
 
+#attachment-heading {
+    margin-bottom: 0.25rem;
+}
+
+#message-heading {
+    margin-bottom: 0.25rem;
+}
+
 .bg-primary {
     background-image: linear-gradient(to bottom, #113370, #5f79a8);
 }
@@ -78,4 +86,8 @@ a, u {
 
 .nav-pills .nav-link.active {
     background-color: rgb(54, 54, 54) !important;
+}
+
+.rounded-x {
+    border-radius: 1.5rem;
 }
