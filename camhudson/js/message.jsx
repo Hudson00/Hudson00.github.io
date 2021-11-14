@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 // const { url } = this.props; // NOTE: Braces look for var of same name within object on right
 
 
-class Message extends React.Component {
+class MessageForm extends React.Component {
     constructor(props) {
         // FIXME: Not sure if I need any props stuff since I don't need props
         super(props);

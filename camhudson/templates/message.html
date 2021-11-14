@@ -30,8 +30,8 @@
                 </label>
             </div>
             <div class="form-floating pb-3">
-                <input type="email" class="form-control border-2" id="floatingInput" placeholder="Email">
-                <label for="floatingInput">
+                <input type="email" class="form-control border-2 rounded-x" id="email-address" placeholder="Email" />
+                <label for="email-address">
                     <i>
                         Email address
                     </i>
@@ -39,7 +39,7 @@
             </div>
             <div class="form-floating">
                 <!-- placeholder attribute is necessary for label to float -->
-                <textarea class="form-control border-2" placeholder="" id="message" name="" style="height: 200px;"></textarea>
+                <textarea class="form-control border-2 rounded-x" placeholder="" id="message" name="" style="height: 200px;"></textarea>
                 <label for="message">
                     <i>
                         What&apos;s on your mind&quest;
@@ -55,11 +55,15 @@
                     </h3>
                     5 MB max. If you need to include more than one attachment, please do it in the follow up after submitting this message. To submit an attachment, you must complete another Captcha (this is done to mitigate spam).
                 </i>
-                <label for="attachment" class="form-label">&nbsp;</label>
-                <input class="form-control form-control-sm" id="attachment" type="file">
+                <label for="attachment" class="form-label">
+                    &nbsp;
+                </label>
+                <input class="form-control form-control-sm border-2 rounded-x" id="attachment" type="file" />
             </div>
             <div class="pt-3">
-                <button type="submit" class="btn btn-primary border-3">Submit</button>
+                <button type="submit" class="btn btn-primary border-3">
+                    Submit
+                </button>
             </div>
         </div>
     </form>
