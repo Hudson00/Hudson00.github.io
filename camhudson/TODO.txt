@@ -10,13 +10,14 @@ Anonymous Message   |  - Add database functionality to store messages.
                     |    (read/unread) and/or see a direct reply and/or option
                     |    to follow up?
                     |  - Attachment capabilities (png/jpg/jpeg/gif/mp3/mp4, etc)
+                    |  - Add ability to notify myself
 --------------------------------------------------------------------------------
 Bug Reports         |  - Add form. Good place to use JS for a successful send.
 --------------------------------------------------------------------------------
 Last Updated        |  - Add a "last updated" footer
 --------------------------------------------------------------------------------
 Resume Page         |  - Consider adding a page that consists of links to
-                    |   different resume versions
+                    |    different resume versions
 --------------------------------------------------------------------------------
 Code                |  - Add code to page
 --------------------------------------------------------------------------------
