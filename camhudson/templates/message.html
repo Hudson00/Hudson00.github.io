@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% block page %}
+<div class="container">
+    <div>
+        <h1 id="message-heading">
+            <i>
+                <b>
+                    Message
+                </b>
+            </i>
+        </h1>
+        <i>
+            The message is sent anonymously by default. No information about you will be stored (unless you opt to include an email address or include personally identifiable information in the message). The only information stored in the database is:
+            <ul>
+                <li>the message itself</li>
+                <li>any attachment</li>
+                <li>message timestamp</li>
+                <li>(optional) the provided email address</li>
+            </ul>
+        </i>
+    </div>
+    <form method="POST">
+        <div class="form-group">
+            <div class="form-check pb-2">
+                <input type="checkbox" class="form-check-input" id="check1" checked />
+                <label class="form-check-label" for="check1">
+                    <b>
+                        Send anonymously
+                    </b>
+                </label>
+            </div>
+            <div class="form-floating pb-3">
+                <input type="email" class="form-control border-2" id="floatingInput" placeholder="Email">
+                <label for="floatingInput">
+                    <i>
+                        Email address
+                    </i>
+                </label>
+            </div>
+            <div class="form-floating">
+                <!-- placeholder attribute is necessary for label to float -->
+                <textarea class="form-control border-2" placeholder="" id="message" name="" style="height: 200px;"></textarea>
+                <label for="message">
+                    <i>
+                        What&apos;s on your mind&quest;
+                    </i>
+                </label>
+            </div>
+            <div class="pt-3">
+                <i>
+                    <h3 id="attachment-heading" >
+                        <b>
+                            Attachment
+                        </b>
+                    </h3>
+                    5 MB max. If you need to include more than one attachment, please do it in the follow up after submitting this message. To submit an attachment, you must complete another Captcha (this is done to mitigate spam).
+                </i>
+                <label for="attachment" class="form-label">&nbsp;</label>
+                <input class="form-control form-control-sm" id="attachment" type="file">
+            </div>
+            <div class="pt-3">
+                <button type="submit" class="btn btn-primary border-3">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock page %}
